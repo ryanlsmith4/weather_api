@@ -8,9 +8,16 @@
           <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
           <input type="submit" class="ghost-button" value="Get Weather">
         </form>
+
+        <form action="/api/weather/mood" method="post">
+          <input name="mood" type="text" class="ghost-input" placeholder="Input your mood according to the weather" required>
+          <input type="submit" class="ghost-button" value="Input Mood">
+        </form>
         {{#if weather}}
         <p>{{weather}}</p>
         {{/if}}
+
+        {{ current_mood }}
       </fieldset>
     </div>
   </body>
